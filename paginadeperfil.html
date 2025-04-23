@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffeaa7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #2d3436;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="mensagem"></h1>
+  <script>
+    const nome = localStorage.getItem('nomeUsuario') || 'Usuário';
+    document.getElementById('mensagem').textContent = `Olá Sr. ${nome}`;
+  </script>
+</body>
+</html>
